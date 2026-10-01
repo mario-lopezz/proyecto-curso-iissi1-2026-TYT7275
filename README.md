@@ -2,10 +2,9 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. López Núñez, Mario
+2. Yañez López, José Luis
+3. Romero Zurdo, Roberto
 
 ## 1. Introducción al problema
 
