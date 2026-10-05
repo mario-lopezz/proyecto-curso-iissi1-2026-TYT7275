@@ -2,7 +2,7 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. López Núñez, Antonio
+1. López Núñez, Mario
 2. Yañez López, José Luis
 3. Romero Zurdo, Roberto
 
