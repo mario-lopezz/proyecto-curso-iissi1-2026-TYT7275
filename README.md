@@ -59,9 +59,9 @@ La clínica espera un sistema que evite las incoherencias en las citas, conserve
 
     •	Esterilización: intervención que impide la reproducción del animal.
 
-    •	Historial clínico: conjunto de consultas, diagnósticos, tratamientos, vacunas e intervenciones de un paciente.
+    •	__Historial clínico:__ conjunto de consultas, diagnósticos, tratamientos, vacunas e intervenciones de un paciente.
 
-    •	Hospitalización: ingreso de un animal en la clínica, en una jaula, para su observación o tratamiento continuado.
+    •	__Hospitalización:__ ingreso de un animal en la clínica, en una jaula, para su observación o tratamiento continuado.
 
     •	Intervención quirúrgica: operación realizada por un veterinario en el quirófano.
 
