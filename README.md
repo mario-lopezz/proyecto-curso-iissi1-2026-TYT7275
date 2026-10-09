@@ -35,7 +35,7 @@ La clínica espera un sistema que evite las incoherencias en las citas, conserve
 
 ## 2. Glosario de términos
 
-    •	**Alta:** finalización de una hospitalización, tras la cual el animal regresa con su propietario.
+    •	Alta: finalización de una hospitalización, tras la cual el animal regresa con su propietario.
 
     •	Anestesia: procedimiento que se aplica al animal para que no sienta dolor durante una intervención quirúrgica o una prueba.
 
