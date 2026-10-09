@@ -513,9 +513,9 @@ para **planificar la agenda de forma realista.**
 
 ##### R.N.05. Citas en el pasado
 
-Como recepcionista\
-quiero que no se puedan programar citas en el pasado, salvo urgencias que se registran una vez atendidas\
-para evitar errores al registrar citas
+Como **recepcionista,**\
+quiero **que no se puedan programar citas en el pasado, salvo urgencias que se registran una vez atendidas,**\
+para **evitar errores al registrar citas.**
 
 **Prueba de aceptación**
 - Se solicita una cita no urgente para ayer y se recibe un mensaje de error.
@@ -523,9 +523,9 @@ para evitar errores al registrar citas
 
 ##### R.N.06. Propietario titular
 
-Como recepcionista\
-quiero que toda mascota tenga exactamente un propietario titular\
-para saber quién es responsable de sus citas y facturas
+Como **recepcionista,**\
+quiero **que toda mascota tenga exactamente un propietario titular,**\
+para **saber quién es responsable de sus citas y facturas.**
 
 **Prueba de aceptación**
 - Se intenta registrar una mascota sin propietario titular y se recibe un mensaje de error.
@@ -533,9 +533,9 @@ para saber quién es responsable de sus citas y facturas
 
 ##### R.N.07. Microchip de los perros
 
-Como veterinario\
-quiero que todo perro tenga un número de microchip registrado y que dicho número no se repita entre mascotas\
-para identificar con certeza a cada animal
+Como **veterinario,**\
+quiero **que todo perro tenga un número de microchip registrado y que dicho número no se repita entre mascotas,**\
+para **identificar con certeza a cada animal.**
 
 **Prueba de aceptación**
 - Se intenta registrar un perro sin número de microchip y se recibe un mensaje de error.
@@ -544,9 +544,9 @@ para identificar con certeza a cada animal
 
 ##### R.N.08. Vacunas por especie
 
-Como veterinario\
-quiero que una vacuna solo pueda administrarse a mascotas de las especies para las que está indicada\
-para evitar errores de vacunación
+Como **veterinario,**\
+quiero **que una vacuna solo pueda administrarse a mascotas de las especies para las que está indicada,**\
+para **evitar errores de vacunación.**
 
 **Prueba de aceptación**
 - Se administra la vacuna de la rabia, indicada para perros, a un perro y se acepta.
@@ -554,9 +554,9 @@ para evitar errores de vacunación
 
 ##### R.N.09. Próxima dosis
 
-Como veterinario\
-quiero que la fecha de la próxima dosis sea posterior a la fecha de aplicación de la vacuna\
-para mantener un calendario de vacunación coherente
+Como **veterinario,**\
+quiero **que la fecha de la próxima dosis sea posterior a la fecha de aplicación de la vacuna,**\
+para **mantener un calendario de vacunación coherente.**
 
 **Prueba de aceptación**
 - Se registra una vacunación aplicada el 05/10/2026 con próxima dosis el 05/10/2027 y se acepta.
@@ -564,9 +564,9 @@ para mantener un calendario de vacunación coherente
 
 ##### R.N.10. Medicamentos con receta
 
-Como director de la clínica\
-quiero que un medicamento con receta solo pueda dispensarse si existe un tratamiento prescrito por un veterinario para esa mascota\
-para cumplir la normativa sobre medicamentos veterinarios
+Como **director de la clínica,**\
+quiero **que un medicamento con receta solo pueda dispensarse si existe un tratamiento prescrito por un veterinario para esa mascota,**\
+para **cumplir la normativa sobre medicamentos veterinarios.**
 
 **Prueba de aceptación**
 - Se intenta dispensar un antibiótico con receta a una mascota sin tratamiento prescrito y se recibe un mensaje de error.
@@ -574,9 +574,9 @@ para cumplir la normativa sobre medicamentos veterinarios
 
 ##### R.N.11. Stock no negativo
 
-Como auxiliar técnico veterinario\
-quiero que no se puedan dispensar más unidades de un medicamento que las disponibles\
-para que el stock registrado coincida con el real
+Como **auxiliar técnico veterinario,**\
+quiero **que no se puedan dispensar más unidades de un medicamento que las disponibles,**\
+para **que el stock registrado coincida con el real.**
 
 **Prueba de aceptación**
 - Un medicamento tiene 5 unidades en stock. Se dispensan 5 y se acepta, quedando el stock en 0.
@@ -584,9 +584,9 @@ para que el stock registrado coincida con el real
 
 ##### R.N.12. Lotes caducados
 
-Como veterinario\
-quiero que no se puedan dispensar medicamentos ni administrar vacunas de un lote caducado\
-para proteger la salud de los animales
+Como **veterinario,**\
+quiero **que no se puedan dispensar medicamentos ni administrar vacunas de un lote caducado,**\
+para **proteger la salud de los animales.**
 
 **Prueba de aceptación**
 - Se intenta dispensar un medicamento de un lote con fecha de caducidad anterior a hoy y se recibe un mensaje de error.
@@ -594,9 +594,9 @@ para proteger la salud de los animales
 
 ##### R.N.13. Consentimiento informado
 
-Como veterinario\
-quiero que toda intervención quirúrgica requiera el consentimiento firmado por el propietario antes de realizarse\
-para que el propietario conozca y acepte los riesgos
+Como **veterinario,**\
+quiero **que toda intervención quirúrgica requiera el consentimiento firmado por el propietario antes de realizarse,**\
+para **que el propietario conozca y acepte los riesgos.**
 
 **Prueba de aceptación**
 - Se intenta iniciar una intervención sin consentimiento informado firmado y se recibe un mensaje de error.
@@ -604,9 +604,9 @@ para que el propietario conozca y acepte los riesgos
 
 ##### R.N.14. Ocupación de jaulas
 
-Como auxiliar técnico veterinario\
-quiero que un animal no pueda estar ingresado en dos jaulas a la vez ni una jaula alojar a dos animales a la vez\
-para evitar errores en la hospitalización
+Como **auxiliar técnico veterinario,**\
+quiero **que un animal no pueda estar ingresado en dos jaulas a la vez ni una jaula alojar a dos animales a la vez,**\
+para **evitar errores en la hospitalización.**
 
 **Prueba de aceptación**
 - La jaula 3 tiene un animal ingresado. Se intenta ingresar otro en la jaula 3 y se recibe un mensaje de error.
@@ -614,9 +614,9 @@ para evitar errores en la hospitalización
 
 ##### R.N.15. Total de la factura
 
-Como director de la clínica\
-quiero que el importe total de una factura sea la suma de sus líneas, incluidos los impuestos aplicables\
-para evitar errores de facturación
+Como **director de la clínica,**\
+quiero **que el importe total de una factura sea la suma de sus líneas, incluidos los impuestos aplicables,**\
+para **evitar errores de facturación.**
 
 **Prueba de aceptación**
 - Una factura tiene 2 unidades de 10,00 € y 1 unidad de 5,50 €. Su importe total es 25,50 €.
@@ -624,9 +624,9 @@ para evitar errores de facturación
 
 ##### R.N.16. Propietarios con deuda
 
-Como director de la clínica\
-quiero que un propietario con facturas vencidas no pueda solicitar citas no urgentes hasta saldarlas\
-para reducir los impagos
+Como **director de la clínica,**\
+quiero **que un propietario con facturas vencidas no pueda solicitar citas no urgentes hasta saldarlas,**\
+para **reducir los impagos.**
 
 **Prueba de aceptación**
 - Un propietario con una factura vencida solicita una consulta no urgente y se recibe un mensaje de error.
@@ -635,9 +635,9 @@ para reducir los impagos
 
 ##### R.N.17. Citas no presentadas
 
-Como director de la clínica\
-quiero que un propietario con 3 o más citas no presentadas sin aviso en los últimos 12 meses deba abonar una señal para reservar una nueva cita\
-para reducir los huecos vacíos en la agenda
+Como **director de la clínica,**\
+quiero **que un propietario con 3 o más citas no presentadas sin aviso en los últimos 12 meses deba abonar una señal para reservar una nueva cita,**\
+para **reducir los huecos vacíos en la agenda.**
 
 **Prueba de aceptación**
 - Un propietario con 2 citas no presentadas en los últimos 12 meses solicita una cita y se acepta sin señal.
@@ -645,9 +645,9 @@ para reducir los huecos vacíos en la agenda
 
 ##### R.N.18. Mascotas fallecidas
 
-Como recepcionista\
-quiero que una mascota fallecida no pueda tener citas, tratamientos ni vacunaciones posteriores a su fecha de fallecimiento\
-para mantener la coherencia del historial
+Como **recepcionista,**\
+quiero **que una mascota fallecida no pueda tener citas, tratamientos ni vacunaciones posteriores a su fecha de fallecimiento,**\
+para **mantener la coherencia del historial.**
 
 **Prueba de aceptación**
 - Una mascota falleció el 01/10/2026. Se solicita una cita para el 10/10/2026 y se recibe un mensaje de error.
@@ -655,9 +655,9 @@ para mantener la coherencia del historial
 
 ##### R.N.19. Competencias profesionales
 
-Como director de la clínica\
-quiero que solo los veterinarios colegiados puedan atender consultas, prescribir tratamientos, vacunar y operar, y que el número de colegiado sea único\
-para cumplir la normativa profesional
+Como **director de la clínica,**\
+quiero **que solo los veterinarios colegiados puedan atender consultas, prescribir tratamientos, vacunar y operar, y que el número de colegiado sea único,**\
+para **cumplir la normativa profesional.**
 
 **Prueba de aceptación**
 - Un auxiliar técnico veterinario intenta registrar un tratamiento y se recibe un mensaje de error.
@@ -666,15 +666,6 @@ para cumplir la normativa profesional
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
-Historias de usuario (requisitos funcionales) agrupadas por tipo de usuario:
-
-| Tipo de usuario | Requisitos funcionales |
-|:----------------|:-----------------------|
-| Propietario | R.F.06, R.F.08, R.F.20 |
-| Veterinario | R.F.03, R.F.07, R.F.10, R.F.18 |
-| Auxiliar técnico veterinario | R.F.12, R.F.14 |
-| Recepcionista | R.F.02, R.F.04, R.F.05, R.F.09, R.F.15, R.F.17 |
-| Director de la clínica | R.F.01, R.F.11, R.F.13, R.F.16, R.F.19 |
 
 ### 4.3. Requisitos no funcionales (opcional)
 
