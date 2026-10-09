@@ -35,7 +35,7 @@ La clínica espera un sistema que evite las incoherencias en las citas, conserve
 
 ## 2. Glosario de términos
 
-    •	Alta: finalización de una hospitalización, tras la cual el animal regresa con su propietario.
+    •	**Alta:** finalización de una hospitalización, tras la cual el animal regresa con su propietario.
 
     •	Anestesia: procedimiento que se aplica al animal para que no sienta dolor durante una intervención quirúrgica o una prueba.
 
@@ -59,9 +59,9 @@ La clínica espera un sistema que evite las incoherencias en las citas, conserve
 
     •	Esterilización: intervención que impide la reproducción del animal.
 
-    •	__Historial clínico:__ conjunto de consultas, diagnósticos, tratamientos, vacunas e intervenciones de un paciente.
+    •	Historial clínico: conjunto de consultas, diagnósticos, tratamientos, vacunas e intervenciones de un paciente.
 
-    •	__Hospitalización:__ ingreso de un animal en la clínica, en una jaula, para su observación o tratamiento continuado.
+    •	Hospitalización: ingreso de un animal en la clínica, en una jaula, para su observación o tratamiento continuado.
 
     •	Intervención quirúrgica: operación realizada por un veterinario en el quirófano.
 
