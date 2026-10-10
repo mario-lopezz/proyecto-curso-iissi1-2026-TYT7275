@@ -11,7 +11,7 @@
 La Clínica Veterinaria Reina es una clínica situada en Sevilla que cuenta con 4 consultas, 2 quirófanos, 8 jaulas de hospitalización y un equipo de 8 veterinarios, 4 auxiliares técnicos veterinarios y 2 recepcionistas. Atiende principalmente a animales domésticos.
 
 
-![alt text](image.png)
+![Plano de la clínica](img/plano-clinica.png)
 
 
 
