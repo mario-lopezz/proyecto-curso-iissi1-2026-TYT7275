@@ -646,14 +646,7 @@ para **cumplir la normativa profesional.**
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
-| Tipo de usuario | Requisitos funcionales |
-|:----------------|:-----------------------|
-| Propietario | R.F.06, R.F.08, R.F.20 |
-| Veterinario | R.F.03, R.F.07, R.F.10, R.F.18 |
-| Auxiliar técnico veterinario | R.F.12, R.F.14 |
-| Recepcionista | R.F.02, R.F.04, R.F.05, R.F.09, R.F.15, R.F.17 |
-| Director de la clínica | R.F.01, R.F.11, R.F.13, R.F.16, R.F.19 |
-
+![](imagenes/mapa_historias_de_usuario.png)
 
 ### 4.3. Requisitos no funcionales (opcional)
 
@@ -733,5 +726,9 @@ Se consideran todo tipo de constraints declarativas (aquellas definidas durante 
 -- fin entregable 3 --
 
 ## Referencias
+
+
+
+
 
 
