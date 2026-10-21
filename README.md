@@ -60,53 +60,30 @@ Como **recepcionista,**\
 quiero **gestionar las citas de veterinarios y salas,**\
 para **organizar la actividad diaria de la clínica sin errores ni solapamientos.**
 
-#### R.G.02. Gestionar propietarios y mascotas
+#### R.G.02. Gestionar mascotas
 
 Como **recepcionista,**\
-quiero **gestionar la información de propietarios y mascotas,**\
-para **subsanar cualquier error e identificar correctamente a cada mascota y su propietario.**
+quiero **gestionar las mascotas con su propietario titular,**\
+para **identificar correctamente a cada paciente y evitr duplicados.**
 
 #### R.G.03. Gestionar historial clínico
 
 Como **veterinario,**\
-quiero **acceder al historial clínico de mis pacientes y modificarlo,**\
-para **el correcto diagnóstico y desarrollo de consultas e intervenciones.**
+quiero **gestionar el historial clínico de cada mascota con sus consultas, diagnñostios y tratamientos,**\
+para **atenderla con todos sus antecedentes.**
 
-#### R.G.04. Controlar el inventario y hospitalizados
+#### R.G.04. Gestionar vacunaciones.
+
+Como **veterinario,**\
+quiero **llevar el control de las vacunas que se aplican a cada mascota,**\
+para **cumplir con el calendario sanitario de cada animal.**
+
+#### R.G.05. Gestionar medicamentos.
 
 Como **auxiliar técnico veterinario,**\
-quiero **ver el estado de los lotes de medicamentos, jaulas y animales hospitalizados,**\
-para **una correcta organización del trabajo y adecuada atención a los animales.**
+quiero **gestionar los medicamentos y sus lotes,**\
+para **controlar las existencias y evitar el uso de productos caducados.**
 
-#### R.G.05. Gestionar la facturación y cobros
-
-Como **director de la clínica,**\
-quiero **acceder al historial de facturas de la clínica, así como a los pagos de los propietarios,**\
-para **un correcto seguimiento de los gastos e ingresos de la clínica.**
-
-#### R.G.06. Consultar información de gestión
-
-Como **director de la clínica,**\
-quiero **disponer de consultas y estadísticas sobre la actividad de la clínica,**\
-para **tomar mejores decisiones de gestión.**
-
-#### R.G.07. Gestionar vacunación
-
-Como **veterinario,**\
-quiero **llevar el control de las vacunas de cada mascota,**\
-para **cumplir el calendario sanitario y avisar a los propietarios a tiempo.**
-
-#### R.G.08. Gestionar intervenciones y hospitalización
-
-Como **veterinario,**\
-quiero **registrar las intervenciones quirúrgicas y las hospitalizaciones,**\
-para **garantizar el seguimiento y la seguridad de los pacientes.**
-
-#### R.G.09. Consultar la información de mis mascotas
-
-Como **propietario,**\
-quiero **consultar la información de mis mascotas (citas, vacunas, tratamientos y facturas),**\
-para **estar al tanto de su salud y de lo que debo a la clínica.**
 
 ### 3.2. Usuarios del sistema
 
@@ -120,11 +97,11 @@ para **estar al tanto de su salud y de lo que debo a la clínica.**
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Medicamentos con poco stock
+#### R.F.01. Crear cita
 
-Como **director de la clínica,**\
-quiero **listar los medicamentos con stock por debajo del mínimo,**\
-para **hacer los pedidos a tiempo.**
+Como **recepcionista,**\
+quiero **crear una cita para una mascota con un veterinario y una sala en una fecha y hora concretas,**\
+para **organizar la agenda de la clínica.**
 
 #### R.F.02. Disponibilidad de veterinarios y salas
 
