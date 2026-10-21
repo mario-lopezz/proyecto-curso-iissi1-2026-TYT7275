@@ -84,7 +84,6 @@ Como **auxiliar técnico veterinario,**\
 quiero **gestionar los medicamentos y sus lotes,**\
 para **controlar las existencias y evitar el uso de productos caducados.**
 
-
 ### 3.2. Usuarios del sistema
 
 - **Propietario:** responsable de una o varias mascotas.
@@ -103,47 +102,88 @@ Como **recepcionista,**\
 quiero **crear una cita para una mascota con un veterinario y una sala en una fecha y hora concretas,**\
 para **organizar la agenda de la clínica.**
 
-#### R.F.02. Disponibilidad de veterinarios y salas
+**Prueba de aceptación**
+- Se crea una cita con mascota, veterinario, sala, fecha, hora de inicio, duración, tipo  y motivo, y aparece en la agenda como programada.
+- Se intenta crear una cita sin mascota, sin veterinario o sin sala y se recibe un mensaje de error.
+- La Dra. A tiene una cita de 10:00 a 10:30. Se intenta crear otra con la Dra. A de 10:15 a 10:45 y se recibe un mensaje de error.
+
+#### R.F.02. Consultar citas.
 
 Como **recepcionista,**\
-quiero **consultar qué veterinarios y salas están libres en una fecha y franja horaria,**\
-para **dar citas sin solapamientos.**
+quiero **consultar las citas de un día, de un veterinario o de una mascota, y ver qué veterinarios y salas están libres en una franja horaria,**\
+para **informar al propietario y dar citas sin solapamientos.**
 
-#### R.F.03. Agenda diaria
+**Prueba de aceptación**
+- La Dra. A tiene 3 citas hoy. Se consulta su agenda diaria y aparecen las 3 ordenadas por hora, con la mascota, la sala y el motivo.
+- Una mascota tien 2 citas pasadas y 1 futura. Se consultan sus citas y aparecen las 3 ordenadas por fecha.
 
-Como **veterinario,**\
-quiero **consultar mi agenda diaria con la mascota, la sala y el motivo de cada cita,**\
-para **preparar mi jornada.**
-
-#### R.F.04. Citas de una mascota
+#### R.F.03. Modificar cita.
 
 Como **recepcionista,**\
-quiero **listar las citas pasadas y futuras de una mascota,**\
-para **informar al propietario.**
+quiero **modificar la fecha, la hora, el veterinario o la sala de una cita, y cambiar su estado,**\
+para **reprogramarla o reflejar si se ha atendido, cancelado o no se ha presentado el propietario.**
 
-#### R.F.05. Mascotas de un propietario
+**Prueba de aceptación**
+- Una cita programada de 10:00 a 10:30 se cambia a las 12:00 y, al consultarla, aparece con la nueva hora.
+- Se intenta cambiar una cita a un horario en el que el veterinario ya tiene otra cita y se recibe un mensaje de error.
+- Se cambia el estado de una cita programada a cancelada y su veterinario y su sala quedan libres a esa hora.
+- Se cambia el estado de una cita programada a atendida y aparece como atendida.
+
+#### R.F.04. Eliminar cita.
 
 Como **recepcionista,**\
-quiero **listar las mascotas de un propietario con su especie, raza y edad,**\
+quiero **eliminar una cita registrada por error,**\
+para **mantener la agenda libre de dats incorrectos.**
+
+**Prueba de aceptación**
+- Se elimina una cita progrmada y deja de aparecer en la agenda del veterinario y en las citas de la mascota.
+- Tras eliminar la cita, el veterinario y la sala quedan libres a esa hora.
+- Se intenta eliminar una cita que no existe y se recibe un mensaje de error.
+
+#### R.F.05. Crear mascota.
+
+Como **recepcionista,**\
+quiero **registrar una mascota con su especie, raza, sexo, color, fecha de nacimiento, microchip y propietario titular,**\
+para **poder identificarla en la clínica.**
+
+**Prueba de aceptación**
+- Se crea una mascota cin todos sus datos y su propietario titular y aparece en las mascotas del propietario.
+- Se intenta crear una mascota sin propietario titular o sin especie y se recibe un mensaje de error.
+- Se intenta crear una mascota con un número de microchip ya asignado a otra mascota y se recibe un mensaje de error.
+- Se crea una mascota de un propietario que aún no está registrado, se registra primero al propietario con DNI, nombre, apellidos y teléfono, y ambos aparecen en el sistema.
+
+#### R.F.06. Consultar mascotas.
+
+Como **recepcionista,**\
+quiero **listar las mascotas de un propietario con su especie, raza y edad, y buscar una mascota por su número de microchip,**\
 para **identificar rápidamente al paciente.**
 
-#### R.F.06. Cita de mis mascotas
+**Prueba de aceptación**
+- Un propietario tiene 2 mascotas. Se consultan y aparecen las 2 con su especie, raza y edad.
+- Se busca el microchip de una mascota registrada y aparece; se busca un microchip que no existe y no aparece ningún resultado.
+- Se consulta un propietario sin mascotas y no aparece ningún resultado.
 
-Como **propietario,**\
-quiero **consultar las citas pasadas y futuras de mis mascotas,**\
-para **organizarme y no olvidar ninguna cita.**
+#### R.F.07. Modificar mascota.
 
-#### R.F.07. Historial clínico
+Como **recepcionista,**\
+quiero **modificar los datos de una mascota, su estado (viva o fallecida) y su propietario titular,**\
+para **mantener su información al día.**
 
-Como **veterinario,**\
-quiero **consultar el historial clínico completo de una mascota (consultas, diagnósticos, tratamientos, vacunas e intervenciones),**\
-para **atenderla con todos sus antecedentes.**
+**Prueba de aceptación**
+- Se modifica el nombre y el color de una mascota, se consulta y aparece con los nuevos datos.
+- Se marca una mascota como fallecida con su fecha de fallecimiento y aparece como fallecida.
+- Se cambia el propietario titular de una mascota y aparece en las mascotas del nuevo propietario y deja de aparecer en las del anterior.
+- Se intenta dejar una mascota sin propietario titular y se recibe un mensaje de error.
 
-#### R.F.08. Cartilla de vacunación
+#### R.F.08. Eliminar mascota.
 
-Como **propietario,**\
-quiero **consultar la cartilla de vacunación de mi mascota con las fechas de aplicación y las próximas dosis,**\
-para **mantener sus vacunas al día.**
+Como **recepcionista,**\
+quiero **eliminar una mascota registrada por error o duplicada,**\
+para **evitar pacientes duplicados.**
+
+**Prueba de aceptación**
+- Se elimina una mascota duplicada y deja de aparecer en las mascotas del propietario y en la búsqueda por microchip.
+- Se intenta eliminar una mascota que no existe y se recibe un mensaje de error.
 
 #### R.F.09. Vacunas pendientes
 
