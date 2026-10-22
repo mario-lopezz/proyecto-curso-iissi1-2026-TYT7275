@@ -185,77 +185,134 @@ para **evitar pacientes duplicados.**
 - Se elimina una mascota duplicada y deja de aparecer en las mascotas del propietario y en la búsqueda por microchip.
 - Se intenta eliminar una mascota que no existe y se recibe un mensaje de error.
 
-#### R.F.09. Vacunas pendientes
-
-Como **recepcionista,**\
-quiero **listar las mascotas con vacunas pendientes o próximas a vencer en un periodo, con los datos de contacto de los propietarios,**\
-para **avisar a los propietarios.**
-
-#### R.F.10. Tratamientos activos
+#### R.F.09. Crear consulta clínica.
 
 Como **veterinario,**\
-quiero **listar los tratamientos activos de una mascota,**\
-para **evitar duplicar o contraindicar medicación.**
+quiero **registrar la consulta clínica de una cita atendida con peso, temperatura, síntomas, diagnóstico y los tratamientos presccritos,**\
+para **dejar constancia de la atención al paciente.**
 
-#### R.F.11. Pacientes por especie y raza
+**Prueba de aceptación**
+- Se registra la consulta clíica de una cita atendida con peso, temperatura, síntomas y diagnóstico y aparece en el historial de la mascota.
+- Se prescribe un tratamiento en la consulta con su medicamento, dosis, frecuencia y fecha de inicio y de fin, y aparece como tratamiento de la mascota.
+- Se intenta registrar la consulta clínica de una cita que no está atendida y se recibe un mensaje de error.
 
-Como **director de la clínica,**\
-quiero **consultar el número de pacientes por especie y raza,**\
-para **planificar servicios y compras.**
-
-#### R.F.12. Lotes a punto de caducar
-
-Como **auxiliar técnico veterinario,**\
-quiero **listar los lotes de medicamentos y vacunas caducados o que caducan en un periodo,**\
-para **usarlos a tiempo o retirarlos.**
-
-#### R.F.13. Intervenciones realizadas
-
-Como **director de la clínica,**\
-quiero **listar las intervenciones quirúrgicas de un periodo, por veterinario o por tipo,**\
-para **evaluar la actividad quirúrgica.**
-
-#### R.F.14. Hospitalizados y jaulas libres
-
-Como **auxiliar técnico veterinario,**\
-quiero **listar los animales hospitalizados y las jaulas libres,**\
-para **organizar los ingresos.**
-
-#### R.F.15. Facturas pendientes
-
-Como **recepcionista,**\
-quiero **listar las facturas pendientes o vencidas, de un propietario o de todos, con su importe,**\
-para **reclamar los pagos.**
-
-#### R.F.16. Carga de trabajo
-
-Como **director de la clínica,**\
-quiero **consultar cuántas citas ha atendido cada veterinario en un periodo,**\
-para **repartir mejor la carga de trabajo.**
-
-#### R.F.17. Citas no presentadas
-
-Como **recepcionista,**\
-quiero **listar los propietarios con citas no presentadas en un periodo,**\
-para **aplicar las políticas de la clínica.**
-
-#### R.F.18. Búsqueda por microchip
+#### R.F.10. Consultar historial clínico.
 
 Como **veterinario,**\
-quiero **buscar una mascota por su número de microchip,**\
-para **identificar un animal con certeza.**
+quiero **consultar el historial clínico completo de una mascota (consultas, diagnósticos, tratamientos, vacunas e intervenciones) y sus tratamientos activos,**\
+para **atenderla con todos sus antecedentes y evitar suplicar o contraindicar.**
 
-#### R.F.19. Facturación por servicio
+**Prueba de aceptación**
+- Una mascota tiene una consulta, un tratamiento, una vacunación y una intervención. Se consulta su historial y aparecen los cuatro registros ordenados por fecha.
+- Una mascota tiene un tratamiento que terminó ayer y otro vigente. Se consultan sus tratamientos activos y solo aparece el vigente.
+- Se consulta el historial de una mascota sin consultas y no aparece ningún registro.
 
-Como **director de la clínica,**\
-quiero **consultar la facturación de un periodo agrupada por tipo de servicio,**\
-para **conocer qué servicios generan más ingresos.**
+#### R.F.11. Modificar consulta clínica
 
-#### R.F.20. Mis facturas
+Como **veterinario,**\
+quiero **modificar las síntomas, el diagnóstico, las observaciones y los tratamientos de una consulta clínica,**\
+para **corregir o completar la información registrada.**
+
+**Prueba de aceptación**
+- Se modifica el diagnóstico de una consulta, se consulta el historal y aparece el nuevo diagnóstico.
+- Se cambia la dosis y la fecha  de fin de un tratamiento y aparecen los nuevos valores.
+- Se intenta dejar un tratamiento sin medicamento y se recibe un mensaje de error.
+
+#### R.F.12. Eliminar consulta clínica.
+
+Como **veterinario,**\
+quiero **eliminar una consulta clínica registrada por error,**\
+para **mantener el historial clínico libre de datos incorrectos.**
+
+**Prueba de aceptación**
+- Se elimina una consulta clínica y deja de aparecer en el historial de la msacota, junto con sus tratamientos.
+- Se intenta eliminar una consulta que no existe y se recibe un mensaje de error.
+
+#### R.F.13. Crear vacunación.
+
+Como **veterinario,**\
+quiero **registrar la vacuna que aplico a una mascota con su lote, su fecha de aplicación y la fecha de la próxima dosis,**\
+para **para mantener su calendario de vacunación.**
+
+**Prueba de aceptación**
+- Se registra la vacuna antirrábica a un perro con su lote y su próxima dosis y aparece en la cartilla de vacunación de la mascota.
+- Se administra una vacuna indicada solo para perros a un gato y se recibe un mensaje de error.
+- Se intenta registrar una vacunación sin mascota, sin vacuna o sin código de lote y se recibe un mensaje de error.
+
+#### R.F.14. Consultar vacunaciones.
 
 Como **propietario,**\
-quiero **consultar mis facturas pendientes y pagadas con su importe y fecha,**\
-para **saber qué debo abonar a la clínica.**
+quiero **consultr la cartilla de vacunación de mis mascotas con las fechas de aplicación y las próximas dosis,**\
+para **mantener sus vacunas al día.**
+
+**Prueba de aceptación**
+- Una mascota fue vacunada de la rabia el 01/10/2026 con próxima dosis el 01/10/2027. Se consulta su cartilla y aparecen ambas fechas.
+- Un propietario con dos mascotas consulta sus cartillas y solo aparecen las vacunaciones de sus propias mascotas.
+- Se consulta la cartilla de una mascota sin vacunaciones y no aparece ningún resultado.
+
+#### R.F.15. Modificar vacunación.
+
+Como **veterinario,**\
+quiero **modificar el lote, la fecha de aplicación, la vacuna y la fecha de la próxima dosis de una vacunación,**\
+para **cooregir los datos registrados.**
+
+**Prueba de aceptación**
+- Se cambia la fecha de la próxima dosis de una vacunación, se consulta la cartilla y aparece la nueva fecha.
+- Se cambia el código de lote de una vacunación y aparece el nuevo lote.
+- Se cambia la vacuna de una vacunación por otra no indicada para la especie de la mascota y se recibe un mensaje de error
+
+#### R.F.16. Eliminar vacunación.
+
+Como **veterinario,**\
+quiero **eliminar una vacunación registrada por error,**\
+para **mantener la cartilla de vacunación correcta.**
+
+**Prueba de aceptación**
+- Se elimina un a vacunación y deja de aparecer en al cartilla de la mascota.
+- Se intenta eliminar una vacunación que no existe y se recibe un mensaje de error.
+
+#### R.F.17. Crear medicamento.
+
+Como **auxiliar técnico veterinario,**\
+quiero **dar de alta un medicamento con su código, nombre comercial, principio activo, receta, precio y stock mínimo, y registrar sus lotes con su fecha de caducidad y unidades,**\
+para **tener el inventario de la clínica actualizado.**
+
+**Prueba de aceptación**
+- Se crea un medicamento con todos sus datos y aparece en el listado de medicamentos.
+- Se añade un lote al medicamento con su código, su fecha de caducidad y sus unidades disponibles y aparece asociado a ese medicamento.
+
+#### R.F.18. Consultar medicamentos.
+
+Como **director de la clínica,**\
+quiero **listar los medicamentos con stock por debajo del mínimo y los lotes caducados o que caducan en un periodo,**\
+para **hacer los pedidos a tiempo y retirar los lotes caducados.**
+
+**Prueba de aceptación**
+- Un medicamento tiene stock 3 y mínimo 5, y otro tiene stock 10 y mínimo 5. Se consulta y solo aparece el primero.
+- Un lote caduca dentro de 15 días y otro dentro de 1 año. Se consultan los lotes que caducan en los próximos 30 días y solo aparece el primero.
+- Un lote caducó la semana pasada. Se consultan los lotes caducados y aparece.
+
+#### R.F.19. Modificar medicamento.
+
+Como **auxiliar técnico veterinario,**\
+quiero **modificar el precio, el srock mínimo y las unidades disponibles de un medicamento y de sus lotes,**\
+para **mantener las existencias al día.**
+
+**Prueba de aceptación**
+- Se modifica el precio de un medicamento, se consulta y aparece el nuevo precio.
+- Se cambian las unidades disponibles de un lote y aparecen las nuevas unidades.
+- Se intenta dejar un lote con unidades negativas y se recibe un mensaje de error.
+
+#### R.F.20. Eliminar medicamento.
+
+Como **auxiliar técnico veterinario,**\
+quiero **eliminar un medicamento o un lote caducado del inventario,**\
+para **no usar productos caducados.**
+
+**Prueba de aceptación**
+- Se elimina un lote caducado y deja de aparecer en el listado de lotes del medicamento.
+- Se elimina un medicamento sin lotes y deja de aparecer en el listado de medicamentos.
+- Se intenta eliminar un medicamento qeu no existe y se recibe un mensaje de error
 
 #### 4.1.1. Requisitos de información
 
@@ -525,24 +582,9 @@ para **evitar errores de vacunación.**
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
-![](imagenes/mapa_historias_de_usuario.png)
+![](imagenes/mapa_historias_de_usuario_2.png)
 
 ### 4.3. Requisitos no funcionales (opcional)
-
-**R.N.F.01. Control de acceso**\
-Como **veterinario,**\
-quiero **que los datos clínicos solo sean accesibles para el personal clínico autorizado y, en el caso del propietario, para sus propias mascotas,**\
-para **proteger la privacidad.**
-
-**R.N.F.02. Trazabilidad de lotes**\
-Como **veterinario,**\
-quiero **poder vincular cada vacuna administrada y cada medicamento dispensado a su lote,**\
-para **actuar con rapidez ante una retirada de producto.**
-
-**R.N.F.03. Tiempo de respuesta**\
-Como **recepcionista,**\
-quiero **que la búsqueda por microchip y la consulta de la agenda diaria respondan en menos de 2 segundos,**\
-para **no hacer esperar a los clientes.**
 
 -- fin entregable 1 --
 
