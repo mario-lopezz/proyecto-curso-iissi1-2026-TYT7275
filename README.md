@@ -323,46 +323,28 @@ quiero **disponer de la siguiente información sobre las personas registradas en
 
 - DNI O NIF
 - Nombre y apellidos
-- Teléfono
-- Correo electrónico
+- Teléfono y correo electrónico
 - Dirección
-
-##### R.I.02. Información de propietarios
-
-Como **recepcionista,**\
-quiero **disponer de la siguiente información sobre los propietarios:**
-
 - Fecha de alta
-- Preferencia de contacto (teléfono o correo electrónico)
 
-##### R.I.03. Información de veterinarios
+**Un propietario puede ser titular de varias mascotas, o de ninguna.**
+
+##### R.I.02. Información de veterinarios
 
 Como **director de la clínica,**\
 quiero **disponer de la siguiente información sobre los veterinarios:**
 
+- DNI o NIF
+- Nombre y apellidos
 - Número de colegiado
 - Especialidad (medicina general, cirugía, dermatología...)
 - Fecha de contratación
 
-##### R.I.04. Información del personal auxiliar y administrativo
+**Un veterinario puede atender varias citas, o ninguna.**
 
-Como **director de la clínica,**\
-quiero **disponer de la siguiente información sobre el personal auxiliar y administrativo:**
+##### R.I.03. Información de mascotas
 
-- Puesto (auxiliar técnico veterinario, recepcionista)
-- Titulación, si la tiene
-- Fecha de contratación
-
-##### R.I.05. Información de especies
-
-Como **veterinario,**\
-quiero **disponer de la siguiente información sobre las especies atendidas:**
-
-- Nombre de la especie (perro, gato, conejo, ave...)
-
-##### R.I.06. Información de mascotas
-
-Como **veterinario,**\
+Como **recepcionista,**\
 quiero **disponer de la siguiente información sobre las mascotas:**
 
 - Nombre
@@ -375,7 +357,10 @@ quiero **disponer de la siguiente información sobre las mascotas:**
 - Estado (viva o fallecida) y fecha de fallecimiento, si se ha producido
 - Propietario titular
 
-##### R.I.07. Información de salas
+**Cada mascota tiene un único propietario titular.**
+**Una mascota puede tener varias citas, o ninguna.**
+
+##### R.I.04. Información de salas
 
 Como **recepcionista,**\
 quiero **disponer de la siguiente información sobre las salas de la clínica:**
@@ -384,84 +369,57 @@ quiero **disponer de la siguiente información sobre las salas de la clínica:**
 - Tipo (consulta, quirófano o zona de pruebas)
 - Estado (operativa o fuera de servicio)
 
-##### R.I.08. Información de servicios
+**Una sala puede utilizarse en varias citas, o en ninguna.**
 
-Como **director de la clínica,**\
-quiero **disponer de la siguiente información sobre los servicios que ofrece la clínica:**
-
-- Código y nombre
-- Tipo (consulta, vacunación, cirugía, analítica, hospitalización...)
-- Duración estimada en minutos.
-- Precio base.
-
-##### R.I.09. Información de citas
+##### R.I.05. Información de citas
 
 Como **recepcionista,**\
 quiero **disponer de la siguiente información sobre las citas:**
 
-- Mascota y veterinario
-- Sala
 - Fecha, hora de inicio y duración
 - Tipo y motivo
 - Si es una urgencia
 - Estado (programada, cancelada, no presentada o atendida)
 
-##### R.I.10. Información de consultas clínicas
+**Cada cita es de una única mascota, la atiende un único veterinario y se realiza una única sala.**
+**Una cita atendida tiene como máximo una consulta clínica.**
+
+##### R.I.06. Información de consultas clínicas
 
 Como **veterinario,**\
-quiero **disponer de la siguiente información sobre cada cita atendida:**
+quiero **disponer de la siguiente información sobre las consultas clínicas y sus tratamientos:**
 
 - Peso
 - Temperatura
 - Síntomas
 - Diagnóstico
 - Observaciones
+- Trataamientos prescritos (dosis, frecuencia, fecha de inicio y fecha de fin)
 
-##### R.I.11. Información de medicamentos
+**Cada consulta clínica pertenece a una única cita atendida.**
+**Cada consulta puede prescribir varios tratamientos, o ninguno.**
+**Cada tratamiento utiliza un único medicamento.**
 
-Como **director de la clínica,**\
-quiero **disponer de la siguiente información sobre los medicamentos:**
+##### R.I.07. Información de medicamentos
+
+Como **auxiliar técnico veterinario,**\
+quiero **disponer de la siguiente información sobre los medicamentos y sus lotes:**
 
 - Código, nombre comercial y principio activo
 - Si requiere receta
 - Precio
 - Unidades en stock y stock mínimo
-
-##### R.I.12. Información de lotes de medicamentos
-
-Como **auxiliar técnico veterinario,**\
-quiero **disponer de la siguiente información sobre los lotes de medicamentos:**
-
-- Medicamento
 - Código de lote
 - Fecha de caducidad
 - Unidades disponibles
 
-##### R.I.13. Información de tratamientos
+**Cada medicamento tiene uno o varios lotes.**
+**Cada lote pertenece a un único medicamento.**
+
+##### R.I.08. Información de vacunaciones
 
 Como **veterinario,**\
-quiero **disponer de la siguiente información sobre los tratamientos:**
-
-- Consulta clínica en la que se prescribe
-- Medicamento
-- Dosis y frecuencia
-- Fecha de inicio y fecha de fin
-- Instrucciones
-
-##### R.I.14. Información de vacunas
-
-Como **veterinario,**\
-quiero **disponer de la siguiente información sobre las vacunas:**
-
-- Nombre
-- Enfermedades que previene
-- Especies para las que está indicada
-- Periodicidad de las dosis
-
-##### R.I.15. Información de las vacunaciones
-
-Como **veterinario,**\
-quiero **disponer de la siguiente información sobre las vacunaciones:**
+quiero **disponer de la siguiente información sobre las vacunas y sus vacunaciones:**
 
 - Mascota y vacuna
 - Veterinario que la administra
@@ -469,49 +427,8 @@ quiero **disponer de la siguiente información sobre las vacunaciones:**
 - Código del lote y fecha de caducidad del lote
 - Fecha de la próxima dosis
 
-##### R.I.16. Información de intervenciones quirúrgicas
-
-Como **veterinario,**\
-quiero **disponer de la siguiente información sobre las intervenciones quirúrgicas:**
-
-- Cita en la que se realiza
-- Tipo de intervención
-- Quirófano
-- Tipo de anestesia
-- Hora de inicio y de fin
-- Resultado
-- Consentimiento informado (firmado o no, y fecha de la firma)
-
-##### R.I.17. Información de jaulas
-
-Como **auxiliar técnico veterinario,**\
-quiero **disponer de la siguiente información sobre las jaulas:**
-
-- Número
-- Tamaño (pequeña, mediana o grande)
-- Estado (libre, ocupada o en limpieza)
-
-##### R.I.18. Información de hospitalizaciones
-
-Como **veterinario,**\
-quiero **disponer de la siguiente información sobre las hospitalizaciones:**
-
-- Mascota y jaula
-- Fecha y hora de ingreso y de alta
-- Motivo
-- Estado
-
-##### R.I.19. Información de facturas
-
-Como **recepcionista,**\
-quiero **disponer de la siguiente información sobre las facturas:**
-
-- Número
-- Propietario
-- Fecha de emisión y fecha de vencimiento
-- Importe total
-- Forma de pago
-- Estado (pendiente, pagada o vencida)
+**Cada vacunación relaciona una única mascota, una única vacuna y un único veterinario qeu la administra.**
+**Una mascota puede tener varias vacunaciones, o ninguna.**
 
 #### 4.1.2. Reglas de negocio
 
@@ -578,7 +495,6 @@ para **evitar errores de vacunación.**
 **Prueba de aceptación**
 - Se administra la vacuna de la rabia, indicada para perros, a un perro y se acepta.
 - Se administra una vacuna indicada solo para perros a un gato y se recibe un mensaje de error.
-
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
