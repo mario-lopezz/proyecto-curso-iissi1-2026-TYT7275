@@ -516,19 +516,19 @@ para **evitar errores de vacunación.**
 
 Ana García es la propietaria titular de Luna, una perra. El 10/11/2026 a las 10:00, el Dr. Ruiz atiende en la Consulta 1 una cita de 30 minutos de Luna. De la cita sale una consulta clínica con diagnóstico de otitis externa y un tratamiento con OticVet, un medicamento con receta del que existe el lote L-2207. Este escenario es válido y recorre las asociaciones A01, A02, A03, A04, A08, A09, A10 y A11.
 
-![Escenario 1](imagenes/objetos_escenario1.png)
+![](imagenes/escenario1.png)
 
 #### Escenario 2. Vacunación válida
 
 Luna recibe el 01/10/2026 la vacuna antirrábica, administrada por el Dr. Ruiz, con lote R-889 y próxima dosis el 01/10/2027. La vacuna está indicada para perros y gatos, por lo que se cumple {RN06_VacunasPorEspecie}.
 
-![Escenario 2](imagenes/objetos_escenario2.png)
+![](imagenes/escenario2.png)
 
 #### Escenario 3. Estado no válido: citas solapadas
 
 El Dr. Ruiz tiene una cita programada a las 10:00 con duración de 30 minutos y otra a las 10:15, en salas distintas. Este estado **viola** {RN01_SinSolapamientoVeterinario}, por lo que el sistema debe rechazar la segunda cita aunque su sala esté libre.
 
-![Escenario 3](imagenes/objetos_escenario3.png)
+![](imagenes/escenario3.png)
 
 ## 6. Matrices de trazabilidad
 
