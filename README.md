@@ -516,8 +516,6 @@ para **evitar errores de vacunación.**
 
 ## 6. Matrices de trazabilidad
 
-Matrices entre los requisitos (R.I., R.F. y R.N.) y los elementos del modelo conceptual. Las asociaciones se identifican con los códigos A01–A11 de la tabla del apartado 5.1 y las restricciones con RN01–RN06.
-
 ### 6.1. Requisitos y clases
 
 | | Persona | Propietario | Veterinario | Mascota | Sala | Cita | ConsultaClinica | Tratamiento | Vacuna | Vacunacion | Medicamento | Lote |
