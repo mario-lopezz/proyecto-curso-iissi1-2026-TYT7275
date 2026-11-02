@@ -427,7 +427,7 @@ quiero **disponer de la siguiente información sobre las vacunas y sus vacunacio
 - Código del lote y fecha de caducidad del lote
 - Fecha de la próxima dosis
 
-**Cada vacunación relaciona una única mascota, una única vacuna y un único veterinario qeu la administra.**
+**Cada vacunación relaciona una única mascota, una única vacuna y un único veterinario que la administra.**
 **Una mascota puede tener varias vacunaciones, o ninguna.**
 
 #### 4.1.2. Reglas de negocio
