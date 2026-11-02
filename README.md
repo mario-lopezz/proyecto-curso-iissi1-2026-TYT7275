@@ -510,11 +510,43 @@ para **evitar errores de vacunación.**
 
 ![](imagenes/diagrama_clases.png)
 
+#### Asociaciones
+
+| Id | Asociación | Multiplicidad |
+|:---|:-----------|:--------------|
+| A01 | Propietario esTitularDe Mascota | Propietario 1 — 0..* Mascota |
+| A02 | Sala alberga Cita | Sala 1 — 0..* Cita |
+| A03 | Veterinario atiende Cita | Veterinario 1 — 0..* Cita |
+| A04 | Mascota tiene Cita | Mascota 1 — 0..* Cita |
+| A05 | Veterinario administra Vacunacion | Veterinario 1 — 0..* Vacunacion |
+| A06 | Mascota recibe Vacunacion | Mascota 1 — 0..* Vacunacion |
+| A07 | Vacuna esAplicadaEn Vacunacion | Vacuna 1 — 0..* Vacunacion |
+| A08 | Cita genera ConsultaClinica | Cita 1 — 0..1 ConsultaClinica |
+| A09 | ConsultaClinica prescritaEn Tratamiento (composición) | ConsultaClinica 1 — 0..* Tratamiento |
+| A10 | Tratamiento utiliza Medicamento | Tratamiento 0..* — 1 Medicamento |
+| A11 | Medicamento seDivideEn Lote (composición) | Medicamento 1 — 1..* Lote |
+
+#### Generalización
+
+- **Persona** (clase abstracta) se especializa en **Propietario** y **Veterinario** con la restricción `{incompleta, solapada}`.
+
+#### Restricciones
+
+| Id | Restricción | Descripción | Regla de negocio |
+|:---|:------------|:------------|:-----------------|
+| RN01 | {RN01_SinSolapamientoVeterinario} | Un veterinario no puede tener citas solapadas en horario. | R.N.01 |
+| RN02 | {RN02_SinSolapamientoSala} | Una sala no puede albergar citas solapadas en horario. | R.N.02 |
+| RN03 | {RN03_HorarioClinica} | Las citas no urgentes se programan dentro del horario laboral de la clínica. | R.N.03 |
+| RN04 | {RN04_DuracionCita} | La duración es múltiplo de 15 minutos y acorde al tipo de cita. | R.N.04 |
+| RN05 | {RN05_CitasPasadas} | No se pueden programar citas en el pasado, salvo urgencia atendida. | R.N.05 |
+| RN06 | {RN06_VacunasPorEspecie} | La especie de la mascota debe estar entre las especies indicadas de la vacuna. | R.N.06 |
+
+
 ### 5.2. Escenarios de prueba
 
 #### Escenario 1. Cita atendida con consulta clínica y tratamiento
 
-Ana García es la propietaria titular de Luna, una perra. El 10/11/2026 a las 10:00, el Dr. Ruiz atiende en la Consulta 1 una cita de 30 minutos de Luna. De la cita sale una consulta clínica con diagnóstico de otitis externa y un tratamiento con OticVet, un medicamento con receta del que existe el lote L-2207. Este escenario es válido y recorre las asociaciones A01, A02, A03, A04, A08, A09, A10 y A11.
+Ana García es la propietaria titular de Luna, una perra. El 10/11/2026 a las 10:00, el Dr. Ruiz atiende en la Consulta 1 una cita de 30 minutos de Luna. De la cita sale una consulta clínica con diagnóstico de otitis externa y un tratamiento con OticVet, un medicamento con receta del que existe el lote L-2207.
 
 ![](imagenes/escenario1.png)
 
